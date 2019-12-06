@@ -4,10 +4,11 @@ from argparse import ArgumentParser, FileType
 
 if __name__ == "__main__":
     parser = ArgumentParser()
+    parser.add_argument("name", type = str, help = "Scan name.")
     group = parser.add_mutually_exclusive_group(required = True)
-    group.add_argument("-t", "--target", type = str,
+    group.add_argument("-t", "--target", type = str, nargs = "+",
                        help = "Target hostnames, IP addresses, networks, etc.")
-    group.add_argument("-iL", "--target-list", type = FileType("r"),
+    group.add_argument("-iL", "--target-list", type = FileType("r"), nargs = "+",
                        help = "Input from list of hosts/networks.")
     parser.add_argument("-ns", "--nameservers", type = str,
                         help = "Specify custom DNS servers.",
@@ -18,8 +19,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.target_list:
         args.target_list.close()
-    targets = args.target or f"-iL {args.target_list.name}"
-    output = args.target or args.target_list.name.rsplit(".", 1)[0]
+    targets = " ".join(args.target) or f"-iL {args.target_list.name}"
+    output = args.name
 
     datadir = path.abspath(args.datadir).replace("\\", "/")
     if datadir[-1] != "/":
