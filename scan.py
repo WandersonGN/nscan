@@ -61,7 +61,7 @@ whois-ip
     command = " ".join(filter(None, map(str.strip, f"""
 nmap {targets}
      --datadir "{datadir}"
-     --dns-servers "{args.nameservers}"
+     --dns-servers "{','.join(args.nameservers)}"
      --traceroute --reason
      -sS -sU -p1-65535 -sV --version-all -O --osscan-guess
      --script "{scripts}" --script-args-file "{path.join(outdir, 'nse-args.lst')}" --script-timeout 8m
