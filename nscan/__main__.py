@@ -10,18 +10,18 @@ def main():
     group = parser.add_mutually_exclusive_group(required = True)
     group.add_argument("-t", "--target", type = str, nargs = "+",
                        help = "Target hostnames, IP addresses, networks, etc.")
-    group.add_argument("-iL", "--target-list", type = FileType("r"), nargs = "+",
+    group.add_argument("-iL", "--target-list", type = FileType("r"),
                        help = "Input from list of hosts/networks.")
-    parser.add_argument("-ns", "--nameservers", type = str,
+    parser.add_argument("-ns", "--nameservers", type = str, nargs = "+",
                         help = "Specify custom DNS servers.",
-                        default = ",".join(get_default_resolver().nameservers))
+                        default = get_default_resolver().nameservers)
     parser.add_argument("-d", "--datadir", type = str,
                         help = "Specify custom Nmap data file location and output directory.",
                         default = "./nmap/")
     args = parser.parse_args()
     if args.target_list:
         args.target_list.close()
-    targets = " ".join(args.target) or f"-iL {args.target_list.name}"
+    targets = " ".join(args.target) if args.target else f"-iL {args.target_list.name}"
     output = args.name
 
     datadir = path.abspath(args.datadir).replace("\\", "/")
