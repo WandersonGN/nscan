@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="https://svn.nmap.org/nmap/docs/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Nov 28 23:11:19 2019 as: nmap -iL D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public.prefixes -&#45;datadir D:/Sentinella/Security/nmap/ -&#45;dns-servers 192.168.0.1,0.0.0.0 -&#45;traceroute -&#45;reason -sS -sU -p1-65535 -sV -&#45;version-all -O -&#45;osscan-guess -&#45;min-rate 65535 -&#45;min-parallelism 256 -oA D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public/sCSUV-OT -&#45;webxml -->
+<nmaprun scanner="nmap" args="nmap -iL D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public.prefixes -&#45;datadir D:/Sentinella/Security/nmap/ -&#45;dns-servers 192.168.0.1,0.0.0.0 -&#45;traceroute -&#45;reason -sS -sU -p1-65535 -sV -&#45;version-all -O -&#45;osscan-guess -&#45;min-rate 65535 -&#45;min-parallelism 256 -oA D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public/sCSUV-OT -&#45;webxml" start="1574993479" startstr="Thu Nov 28 23:11:19 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<runstats><finished time="1574993483" timestr="Thu Nov 28 23:11:23 2019" elapsed="4.20" summary="Nmap done at Thu Nov 28 23:11:23 2019; 0 IP addresses (0 hosts up) scanned in 4.20 seconds" exit="error" errormsg="dnet: Failed to open device eth3"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

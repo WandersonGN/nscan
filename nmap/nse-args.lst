@@ -1,0 +1,11 @@
+newtargets
+hostmap-bfk.prefix="{outdir}"
+hostmap.prefix="{outdir}"
+http-cross-domain-policy.domain-lookup=true
+http-google-malware.api="AIzaSyAyRWqq3jSzebWehwIS8WLs8WKfByQjDyA"
+shodan-api.apikey="JUKNRebtSUmMsNpOD4dgOlQ3nM4flAD1"
+shodan-api.outfile="{outdir}shodan.csv"
+qscan.numclosed=0
+qscan.numopen=-1
+qscan.numtrips=16
+traceroute-geolocation.kmlfile="{outdir}traceroute-geolocation.kml"

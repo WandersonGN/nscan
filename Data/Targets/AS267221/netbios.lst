@@ -1,0 +1,6 @@
+[+] 179.189.84.56 [SRVPACS] OS:Windows Names:(SRVPACS, WORKGROUP) Addresses:(192.168.1.250, 192.168.1.220) Mac:64:1c:67:8d:f4:2a 
+[*] Scanned  768 of 1024 hosts (75% complete)
+[+] 179.189.86.153 [SRV-ARQUIVOS] OS:Windows Names:(SRV-ARQUIVOS, BENEFICIADORAAC) Addresses:(169.254.39.92, 192.168.1.100) Mac:f4:f2:6d:02:78:84 
+[+] 179.189.86.201 [SERVER-WEB] OS:Windows Names:(SERVER-WEB, P.M.SAO GOTARDO, __MSBROWSE__) Addresses:(192.168.0.220) Mac:10:78:d2:b9:11:35 
+[+] 179.189.86.203 [SRVGOVERNA] OS:Windows Names:(SRVGOVERNA, P.M.SAO GOTARDO) Addresses:(192.168.0.140) Mac:f4:6d:04:48:dd:fc 
+

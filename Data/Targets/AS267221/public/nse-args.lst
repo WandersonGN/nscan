@@ -1,0 +1,11 @@
+newtargets
+hostmap-bfk.prefix="D:\Sentinella\Security\Data\Targets\AS267221\public/"
+hostmap.prefix="D:\Sentinella\Security\Data\Targets\AS267221\public/"
+http-cross-domain-policy.domain-lookup=true
+http-google-malware.api="AIzaSyAyRWqq3jSzebWehwIS8WLs8WKfByQjDyA"
+shodan-api.apikey="JUKNRebtSUmMsNpOD4dgOlQ3nM4flAD1"
+shodan-api.outfile="D:\Sentinella\Security\Data\Targets\AS267221\public/shodan.csv"
+qscan.numclosed=0
+qscan.numopen=-1
+qscan.numtrips=16
+traceroute-geolocation.kmlfile="D:\Sentinella\Security\Data\Targets\AS267221\public/traceroute-geolocation.kml"
