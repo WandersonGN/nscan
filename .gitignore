@@ -10,6 +10,7 @@ __pycache__/
 .Python
 Data/
 nmap/*/
+nmap/nse-args.lst
 build/
 develop-eggs/
 dist/
