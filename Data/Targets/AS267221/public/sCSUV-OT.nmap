@@ -1,3 +1,0 @@
-# Nmap 7.80 scan initiated Thu Nov 28 23:11:19 2019 as: nmap -iL D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public.prefixes --datadir D:/Sentinella/Security/nmap/ --dns-servers 192.168.0.1,0.0.0.0 --traceroute --reason -sS -sU -p1-65535 -sV --version-all -O --osscan-guess --min-rate 65535 --min-parallelism 256 -oA D:\\Sentinella\\Security\\Data\\Targets\\AS267221\\public/sCSUV-OT --webxml
-dnet: Failed to open device eth3
-QUITTING!
