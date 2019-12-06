@@ -11,6 +11,7 @@ setup(name = "nscan",
       author = "Sentinella Enterprise",
       author_email = "suporte@sentinella.com.br",
       url = "https://github.com/sentinella-enterprise/nscan",
-      entry_points = {"console_scripts": ["nscan=scan.__main__:main"]},
+      packages = ["nscan"],
+      entry_points = {"console_scripts": ["nscan=nscan.__main__:main"]},
       install_requires = DEPENDENCIES,
       keywords = ["security", "network", "scanner", "nmap"])
