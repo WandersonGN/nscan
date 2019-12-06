@@ -2,7 +2,9 @@ from os import system, makedirs, path
 from dns.resolver import get_default_resolver
 from argparse import ArgumentParser, FileType
 
-if __name__ == "__main__":
+__all__ = ["main"]
+
+def main():
     parser = ArgumentParser()
     parser.add_argument("name", type = str, help = "Scan name.")
     group = parser.add_mutually_exclusive_group(required = True)
@@ -73,3 +75,6 @@ nmap {targets}
     #exit()
     system(command)
     #system(f"sudo -u wanderson firefox file://{path.join(outdir, 'sCSUV-OT.xml')}")
+
+if __name__ == "__main__":
+    main()
