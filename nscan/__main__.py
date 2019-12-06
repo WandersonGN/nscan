@@ -59,7 +59,8 @@ whois-ip
 """.split()))
     scripts = f"all and not {' and not '.join(blacklist)}"
     # stylesheet https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl
-    command = " ".join(filter(None, map(str.strip, f"""
+    command = (f"nmap --resume {path.join(outdir, 'sCSUV-OT.xml')}" if args.resume else
+               " ".join(filter(None, map(str.strip, f"""
 nmap {targets}
      --datadir "{datadir}"
      --dns-servers "{','.join(args.nameservers)}"
@@ -70,9 +71,7 @@ nmap {targets}
      --min-parallelism 256
      -oA "{path.join(outdir, 'sCSUV-OT')}"
      --webxml
-""".split())))
-    if args.resume:
-        command += f" --resume {path.join(outdir, 'sCSUV-OT.xml')}"
+""".split("\n")))))
     #--datadir "~/nmap/" --system-dns --traceroute --reason -sS -sU -p1-65535 -sV --version-all --osscan-guess --min-rate 65536 --max-rate 67108864 --min-parallelism 256 -oA "~/nmap/179.189.95.128" --webxml --script "external and not broadcast and not brute and not dos and not fuzzer and not intrusive and not asn-query and not clamav-exec and not ip-geolocation-* and not ipidseq and not hostmap-* and not http-google-malware and not http-virustotal and not http-comments-displayer and not http-fetch and not http-vuln-cve2014-212* and not targets-* and not whois-ip" --script-args-file "~/nmap/nse-args.lst" --script-timeout 16m
     #print(command)
     #exit()
