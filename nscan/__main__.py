@@ -65,7 +65,7 @@ nmap {targets}
      --datadir "{datadir}"
      --dns-servers "{','.join(args.nameservers)}"
      --traceroute --reason
-     -sS -sU -p1-65535 -O --osscan-guess
+     -sS -sU -p1-65535 -sV --version-all -O --osscan-guess
      --script "{scripts}" --script-args-file "{path.join(outdir, 'nse-args.lst')}" --script-timeout 8m
      --min-rate 65535
      --min-parallelism 256
