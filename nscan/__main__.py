@@ -56,6 +56,7 @@ http-fetch
 http-xssed
 targets-*
 whois-ip
+http-icloud-*
 """.split()))
     scripts = f"all and not {' and not '.join(blacklist)}"
     # stylesheet https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl
@@ -68,7 +69,7 @@ nmap {targets}
      -sS -sU -p1-65535 -sV --version-all -O --osscan-guess
      --script "{scripts}" --script-args-file "{path.join(outdir, 'nse-args.lst')}" --script-timeout 8m
      --min-rate 65535
-     --min-parallelism 256
+     --min-parallelism 256 --stats-every 1m
      -oA "{path.join(outdir, 'sCSUV-OT')}"
      --webxml
 """.split("\n")))))
