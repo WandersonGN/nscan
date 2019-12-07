@@ -68,7 +68,7 @@ nmap {targets}
      --traceroute --reason
      -sS -sU -p1-65535 -sV --version-all -O --osscan-guess
      --script "{scripts}" --script-args-file "{path.join(outdir, 'nse-args.lst')}"
-     --min-rate 65535
+     --min-rate 65535 --min-hostgroup 256 --max-hostgroup 2048
      --min-parallelism 256 --stats-every 1m
      -oA "{path.join(outdir, 'sCSUV-OT')}"
      --webxml
